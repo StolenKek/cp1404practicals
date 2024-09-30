@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 - Practical
-Broken program to determine score status
+Refactored program to determine score status
 """
 
 import random
@@ -20,14 +20,17 @@ def determine_result(score):
     else:
         return "Bad"
 
-def main():
-    # Ask the user for their score
+def get_valid_score():
+    """Prompt the user for a score and validate it."""
     score = float(input("Enter score: "))
-
-    # Validate the score
     while score < MINIMUM_THRESHOLD or score > MAXIMUM_THRESHOLD:
-        print("Invalid score")
+        print("Invalid score. Please enter a score between 0 and 100.")
         score = float(input("Enter score: "))
+    return score
+
+def main():
+    # Get a valid score from the user
+    score = get_valid_score()
 
     # Print the result for the user's score
     result = determine_result(score)
