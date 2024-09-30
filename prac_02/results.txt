@@ -1,0 +1,4 @@
+4 is Bad
+50 is Passable
+95 is Excellent
+89 is Passable
