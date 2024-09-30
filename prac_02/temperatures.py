@@ -11,8 +11,8 @@ def fahrenheit_to_celsius()
 def main()
     header
     menu
-        Option 1: celsius to fahrenheit
-        Option 2: fahrenheit to celsius
+        Option 1: Celsius to Fahrenheit
+        Option 2: Fahrenheit to Celsius
         Invalid option
 """
 
