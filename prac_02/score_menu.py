@@ -1,5 +1,6 @@
 """
 CP1404 - Practical 2
+Score Menu Program
 
 def main()
     menu
@@ -26,4 +27,3 @@ def determine_result
 def print_stars()
     print score * "*"
 """
-
