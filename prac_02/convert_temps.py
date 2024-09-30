@@ -23,7 +23,7 @@ def main()
 
 import random
 
-def generate_temperatures(filename, count=15):
+def generate_temperatures(filename, count = 15):
     """Generate random temperatures and save to a file."""
     with open(filename, "w") as file:
         for _ in range(count):
@@ -51,9 +51,9 @@ def main():
     output_file = "temps_output.txt"
 
     generate_temperatures(input_file)
-    fahrenheit_temps = read_temperatures(input_file)
-    celsius_temps = [fahrenheit_to_celsius(temp) for temp in fahrenheit_temps]
-    write_temperatures(celsius_temps, output_file)
+    fahrenheit_temps = read_temperatures(input_file) # Read fahrenheit temperatures in input file
+    celsius_temps = [fahrenheit_to_celsius(temp) for temp in fahrenheit_temps] # Celsius conversion
+    write_temperatures(celsius_temps, output_file) # Write Celsius temperatures to output file
 
 if __name__ == "__main__":
     main()
