@@ -17,8 +17,8 @@ E.g., if you changed the minimum length to 5, the program should print 5 and sho
 
 """
 
-MIN_LENGTH = 2
-MAX_LENGTH = 6
+MIN_LENGTH = 5
+MAX_LENGTH = 15
 IS_SPECIAL_CHARACTER_REQUIRED = True
 SPECIAL_CHARACTERS = "!@#$%^&*()_-=+`~,./'[]<>?{}|\\"
 
@@ -42,7 +42,7 @@ def main():
 def is_valid_password(password):
     """Determine if the provided password is valid."""
     # If length is wrong, return False
-    if len(password) < MIN_LENGTH or len(password) > MAX_LENGTH:
+    if len(password) < MIN_LENGTH or len(password)  > MAX_LENGTH:
         return False
 
     number_of_lower = 0
