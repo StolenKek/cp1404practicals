@@ -44,3 +44,12 @@ with open("numbers.txt", "r") as in_file:
     number1 = int(in_file.readline())
     number2 = int(in_file.readline())
 print(number1 + number2)
+
+# 4) Code that reads and prints the sum of all lines in numbers.txt
+total = 0
+with open("numbers.txt", "r") as in_file:
+    lines = in_file.readlines()
+    for line in lines:
+        number = int(line.strip())  # Convert each line to an integer
+        total += number
+print(total)
