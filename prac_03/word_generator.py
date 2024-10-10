@@ -22,9 +22,11 @@ CONSONANTS = "bcdfghjklmnpqrstvwxyz"
 word_format = input("Enter your word format ('%' for consonants & '#' for vowels): ").lower()
 word = ""
 for kind in word_format:
-    if kind == "%":
+    if kind == "%":  # Wildcard for consonant
         word += random.choice(CONSONANTS)
-    else:
+    elif kind == "#":  # Wildcard for vowel
         word += random.choice(VOWELS)
+    elif kind.isalpha():  # Make the alphabetical character use that actual character
+        word += kind
 
 print(word)
