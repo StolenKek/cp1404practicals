@@ -47,7 +47,8 @@ Problem: We have two variables that sound very similar: incomes and months.
 They're both plural, so they sound like they're both lists. incomes is a list of incomes, so we might assume that months is a list of months, but it's actually a scalar value that stores the number of months - an int not a list.
 
 Refactor the months variable to a better name.
-DO NOT just change it in 3 places or use find and replace... but use refactoring in PyCharm by clicking anywhere on the variable and pressing Shift+F6 (or use the context menu). Then rename it to something more meaningful, that sounds like a number not a list.
+DO NOT just change it in 3 places or use find and replace... but use refactoring in PyCharm by clicking anywhere on the variable and pressing Shift+F6 (or use the context menu).
+Then rename it to something more meaningful, that sounds like a number not a list.
 When naming variables, we can say, "This variable stores..." and the completion of that statement is usually a good name.
 In this case, "This variable stores the... number of months". :)
 
@@ -66,15 +67,15 @@ Double-check the report printing function you just wrote. Is it well-designed ac
 def main():
     """Display income report for incomes over a given number of months."""
     incomes = []
-    months = int(input("How many months? "))
+    month_count = int(input("How many months? ")) # This variable stores the number of months
 
-    for month in range(1, months + 1):
+    for month in range(1, month_count + 1):
         income = float(input(f"Enter income for month {str(month)}: "))
         incomes.append(income)
 
     print("\nIncome Report\n-------------")
     total = 0
-    for month in range(1, months + 1):
+    for month in range(1, month_count + 1):
         income = incomes[month - 1]
         total += income
         print("Month {:2} - Income: ${:10.2f} Total: ${:10.2f}".format(month, income, total))
