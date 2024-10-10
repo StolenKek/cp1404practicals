@@ -18,7 +18,9 @@ You can use the functions min, max, sum and len, and you can use the append meth
    The average of the numbers is 6.2
 """
 def main():
-    get_numbers()
+    """Main function to run code"""
+    numbers = get_numbers()  # Get the list of numbers from the user
+    print_results(numbers)
 
 def get_numbers():
     """Prompt the user for 5 numbers and validate each one."""
@@ -27,11 +29,24 @@ def get_numbers():
         valid_input = False  # Flag to track if the input is valid
         while not valid_input:
             try:
-                number = int(input(f"Enter number {i + 1}: "))
+                number = int(input(f"Enter number: "))
                 numbers.append(number)  # Add the valid number to the list
                 valid_input = True
             except ValueError:
                 print("Invalid input; please enter a valid number.")
     return numbers
 
+def print_results(numbers):
+    first_number = numbers[0]
+    last_number = numbers[-1]
+    smallest_number = min(numbers)
+    largest_number = max(numbers)
+    average = sum(numbers) / len(numbers)
 
+    print(f"The first number is {first_number}")
+    print(f"The last number is {last_number}")
+    print(f"The smallest number is {smallest_number}")
+    print(f"The largest number is {largest_number}")
+    print(f"The average of the numbers is {average:.1f}")
+
+main()
