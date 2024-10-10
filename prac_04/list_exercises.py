@@ -17,4 +17,21 @@ You can use the functions min, max, sum and len, and you can use the append meth
    The largest number is 20
    The average of the numbers is 6.2
 """
+def main():
+    get_numbers()
+
+def get_numbers():
+    """Prompt the user for 5 numbers and validate each one."""
+    numbers = []  # List to store valid numbers
+    for i in range(5):
+        valid_input = False  # Flag to track if the input is valid
+        while not valid_input:
+            try:
+                number = int(input(f"Enter number {i + 1}: "))
+                numbers.append(number)  # Add the valid number to the list
+                valid_input = True
+            except ValueError:
+                print("Invalid input; please enter a valid number.")
+    return numbers
+
 
