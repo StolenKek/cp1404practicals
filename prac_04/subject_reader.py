@@ -45,7 +45,7 @@ def load_data():
     input_file.close()
     return subject
 
-def display_subjects():
+def display_subjects(subjects):
     """Display subject details formatted like: subject + is taught by + lecturer + and has + number of students"""
     for subject in subjects:
         print(f"{subject[0]} is taught by {subject[1]} and has {subject[2]} students")
