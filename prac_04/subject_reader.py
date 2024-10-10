@@ -7,6 +7,7 @@ So, a data file storing subjects, lecturer and student numbers might look like:
 
 CP1401,Ada Lovelace,192
 CP1404,Alan Turing,98
+
 We can read a file like this line-by-line (for line in file) but we also need to process each line to get the parts. A good way to do that is with the string split method.
 So, line.split(',') would give us a list that contained the parts of this line... but each part would still be a string.
 
@@ -46,6 +47,12 @@ def load_data():
         print(parts)  # See if that worked
         print("----------")
     input_file.close()
+    return subject
 
+def display_subjects():
+    """Display subject details formatted like: subject + is taught by + lecturer + and has + number of students"""
+    for subject in subjects:
+        print(f"{subject[0]} is taught by {subject[1]:12} and has {subject[2]:3} students")
 
 main()
+
