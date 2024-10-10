@@ -37,16 +37,10 @@ def get_numbers():
     return numbers
 
 def print_results(numbers):
-    first_number = numbers[0]
-    last_number = numbers[-1]
-    smallest_number = min(numbers)
-    largest_number = max(numbers)
-    average = sum(numbers) / len(numbers)
-
-    print(f"The first number is {first_number}")
-    print(f"The last number is {last_number}")
-    print(f"The smallest number is {smallest_number}")
-    print(f"The largest number is {largest_number}")
-    print(f"The average of the numbers is {average:.1f}")
+    print(f"The first number is {numbers[0]}")
+    print(f"The last number is {numbers[-1]}")
+    print(f"The smallest number is {min(numbers)}")
+    print(f"The largest number is {max(numbers)}")
+    print(f"The average of the numbers is {sum(numbers) / len(numbers):.1f}")
 
 main()
